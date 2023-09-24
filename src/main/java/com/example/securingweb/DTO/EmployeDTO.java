@@ -1,0 +1,18 @@
+package com.example.securingweb.DTO;
+
+import org.modelmapper.ModelMapper;
+
+import com.example.securingweb.Models.Employe;
+
+
+
+
+public class EmployeDTO extends UserDTO {
+	
+	
+	public Employe toEmploye() {
+        ModelMapper modelMapper = new ModelMapper();
+        return modelMapper.map(this, Employe.class);
+    }
+
+}
